@@ -11,6 +11,16 @@ public class Drink : MonoBehaviour
     public TAPIOCA_TYPE tapiocaType = TAPIOCA_TYPE.NONE;
     public MILK_TYPE milkType = MILK_TYPE.NONE;
 
+    bool correctTapioca = false;
+    bool correctCupSize = false;
+    bool correctMilkType = false;
+    
+    //quantities
+    float milkQuantityPercentage;
+
+    //order time taken to calcualte score
+    private float timeScore = 1000;
+
     public void Reset()
     {
         cupSize = CUP_SIZE.NONE;

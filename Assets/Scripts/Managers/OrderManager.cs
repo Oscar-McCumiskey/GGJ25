@@ -15,6 +15,8 @@ public class OrderManager : MonoBehaviour
     public Queue<Drink> orderQueue {  get; private set; } //order queue
     Drink currentOrder;
 
+  
+
     private void Awake()
     {
         if (Instance == null)
@@ -50,7 +52,9 @@ public class OrderManager : MonoBehaviour
         for(int i = 0; i < numberOfDrinksToAdd; i++)
         {
             //create a drink GO
-            GameObject newDrink = Instantiate(new GameObject(), drinkListParent);
+            GameObject newDrink = new GameObject();
+            newDrink.transform.parent = drinkListParent;
+
             newDrink.AddComponent<Drink>();
             newDrink.transform.name = "drink";
 
