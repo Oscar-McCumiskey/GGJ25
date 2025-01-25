@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -8,6 +9,7 @@ using UnityEngine.InputSystem;
 
 public class ShakeCup : MonoBehaviour
 {
+    [SerializeField] private Transform cupSlot;
     [SerializeField] private EdgeCollider2D cupTopCollider;
     [SerializeField] private float cupDragForce = 100;
     
@@ -15,14 +17,16 @@ public class ShakeCup : MonoBehaviour
     private Rigidbody2D rb;
     
     private bool dragging;
+    [SerializeField] private float resetSpeed = 10;
     
     // Start is called before the first frame update
     void Start()
     {
         cupTopCollider.enabled = false;
         rb = GetComponent<Rigidbody2D>();
-        
         cam = Camera.main;
+        
+        transform.position = cupSlot.position;
     }
 
     private void FixedUpdate()
@@ -32,7 +36,6 @@ public class ShakeCup : MonoBehaviour
         {
             Vector3 newPos = cam.ScreenToWorldPoint(Input.mousePosition);
             newPos.z = 0;
-            Debug.Log((newPos - transform.position).magnitude);
             
             // set direction
             Vector2 direction = (newPos - transform.position).normalized;
@@ -42,7 +45,7 @@ public class ShakeCup : MonoBehaviour
             {
                 // apply force
                 rb.velocity = Vector2.zero;
-                rb.AddForceAtPosition(direction * (cupDragForce * 10), newPos, ForceMode2D.Impulse);
+                rb.AddForceAtPosition(direction * (cupDragForce * 5), newPos, ForceMode2D.Impulse);
             }
             else if ((newPos - transform.position).magnitude > 0.05f)
             {
@@ -59,9 +62,40 @@ public class ShakeCup : MonoBehaviour
             // reset cursor to center of cup (trust me it somehow makes it feel better)
             Mouse.current.WarpCursorPosition(cam.WorldToScreenPoint(transform.position));
         }
+        
+        // reset cup position
+        if (!dragging)
+        {
+            // reset position back to cup slot
+            rb.velocity = Vector2.zero;
+            Vector2 resetDirection = cupSlot.position - transform.position;
+
+            if (resetDirection.magnitude < 0.01)
+            {
+                // lock position
+                transform.position = cupSlot.position;
+                
+                // unlock cup top
+                cupTopCollider.enabled = false;
+            }
+            else
+            {
+                // move to cup slot
+                rb.AddForce(resetDirection.normalized * (resetDirection.magnitude * resetSpeed), ForceMode2D.Impulse);
+            }
+            
+            // reset rotation back to cup slot
+            if (Mathf.Abs(transform.rotation.eulerAngles.z) < 1)
+            {
+                // lock rotation
+                rb.angularVelocity = 0;
+                rb.totalTorque = 0;
+                transform.rotation = quaternion.identity;
+            }
+            
+        }
     }
-
-
+    
     private void OnMouseDown()
     {
         dragging = true;
@@ -82,7 +116,16 @@ public class ShakeCup : MonoBehaviour
         // show cursor
         Cursor.visible = true;
         
-        // temp
-        cupTopCollider.enabled = false;
+        // apply return rotation
+        if (transform.rotation.eulerAngles.z > 0)
+        {
+            // rotate to 0 CW or ACW, no idea
+            rb.totalTorque = -1000;
+        }
+        else if (transform.rotation.eulerAngles.z < 0)
+        {
+            // rotate to 0 CW or ACW, no idea
+            rb.totalTorque = 1000;
+        }
     }
 }
