@@ -7,44 +7,33 @@ public class ChangeCupSize : MonoBehaviour
     [SerializeField] private GameObject smallCup;
     [SerializeField] private GameObject mediumCup;
     [SerializeField] private GameObject largeCup;
-    private List<GameObject> cupSizeList = new List<GameObject>();
-    private int currentCupIndex = 0;
 
     private void Start()
     {
-        cupSizeList.Add(smallCup);
-        cupSizeList.Add(mediumCup);
-        cupSizeList.Add(largeCup);
-
         //initial cup size (medium)
-        currentCupIndex = 1;
-        cupSizeList[currentCupIndex].SetActive(true);
+        mediumCup.SetActive(true);
     }
-    public void SmallerCupSize()
+    public void SmallCup()
     {
-        int oldCupIndex = currentCupIndex;
-        currentCupIndex--;
+        smallCup.SetActive(true);
 
-        if(currentCupIndex < 0)
-        {
-            currentCupIndex = cupSizeList.Count - 1;
-        }
-
-        cupSizeList[oldCupIndex].SetActive(false);
-        cupSizeList[currentCupIndex].SetActive(true);
+        mediumCup.SetActive(false);
+        largeCup.SetActive(false);
     }
 
-    public void LargerCupSize()
+    public void MediumCup()
     {
-        int oldCupIndex = currentCupIndex;
-        currentCupIndex++;
+        mediumCup.SetActive(true);
 
-        if (currentCupIndex > cupSizeList.Count - 1)
-        {
-            currentCupIndex = 0;
-        }
+        smallCup.SetActive(false);
+        largeCup.SetActive(false);
+    }
 
-        cupSizeList[oldCupIndex].SetActive(false);
-        cupSizeList[currentCupIndex].SetActive(true);
+    public void LargeCup()
+    {
+        largeCup.SetActive(true);
+
+        smallCup.SetActive(false);
+        mediumCup.SetActive(false);
     }
 }
