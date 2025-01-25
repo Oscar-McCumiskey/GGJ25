@@ -5,7 +5,7 @@ using UnityEngine;
 public enum TAPIOCA_TYPE
 {
     NONE,
-    TBD,
-    TODO,
-    NAMEHERE,
+    BROWN,
+    RED,
+    ORANGE,
 };
