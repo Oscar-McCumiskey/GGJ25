@@ -82,7 +82,7 @@ public class OrderManager : MonoBehaviour
             if (currentDrinkParent.childCount > 0)
             {
                 //remove current drink visualisation
-                Destroy(currentDrinkParent.GetChild(0));
+                Destroy(currentDrinkParent.GetChild(0).gameObject);
             }
 
             //Move GO from queue to current
