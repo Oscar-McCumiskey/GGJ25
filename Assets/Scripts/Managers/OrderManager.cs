@@ -9,7 +9,6 @@ using UnityEngine;
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance;
-
     [SerializeField] public Queue<Null> orderQueue {  get; private set; } //order queue
     Null currentOrder;
 
