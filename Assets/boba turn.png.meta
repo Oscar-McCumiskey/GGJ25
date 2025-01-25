@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boba turn_0: -7818282904455363073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
