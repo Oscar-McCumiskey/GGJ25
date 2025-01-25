@@ -19,8 +19,6 @@ public class ChangeCupSize : MonoBehaviour
         //initial cup size (medium)
         currentCupIndex = 1;
         cupSizeList[currentCupIndex].SetActive(true);
-
-
     }
     public void SmallerCupSize()
     {

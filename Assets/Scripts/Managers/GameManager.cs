@@ -18,12 +18,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        StartGame();
+    }
+
     public void StartGame()
     {
         //Initialise the orders
         OrderManager.Instance.Init();
-
-
     }
     
 }

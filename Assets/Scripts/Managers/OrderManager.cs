@@ -9,8 +9,11 @@ using UnityEngine;
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance;
-    [SerializeField] public Queue<Null> orderQueue {  get; private set; } //order queue
-    Null currentOrder;
+    [SerializeField] private Transform drinkListParent;
+    [SerializeField] private Transform currentDrinkParent;
+
+    public Queue<Drink> orderQueue {  get; private set; } //order queue
+    Drink currentOrder;
 
     private void Awake()
     {
@@ -22,6 +25,8 @@ public class OrderManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        orderQueue = new Queue<Drink>();
     }
 
     /// <summary>
@@ -36,15 +41,7 @@ public class OrderManager : MonoBehaviour
         CompleteOrder();
     }
 
-    /// <summary>
-    /// create a drink
-    /// </summary>
-    private void CreateRandomDrink()
-    {
-        //returns a random drink
-    }
-
-    /// <summary>
+  
     /// Allows to add any number of random drinks to queue
     /// </summary>
     /// <param name="numberOfDrinksToAdd"></param>
@@ -52,7 +49,17 @@ public class OrderManager : MonoBehaviour
     {
         for(int i = 0; i < numberOfDrinksToAdd; i++)
         {
-            //orderQueue.Enqueue(CreateRandomDrink());
+            //create a drink GO
+            GameObject newDrink = Instantiate(new GameObject(), drinkListParent);
+            newDrink.AddComponent<Drink>();
+            newDrink.transform.name = "drink";
+
+            //grab drink script
+            Drink drinkScript = newDrink.GetComponent<Drink>();
+            drinkScript.RandomizeDrink();
+
+            //enqueue into list
+            orderQueue.Enqueue(drinkScript);
         }
     }
 
@@ -67,7 +74,20 @@ public class OrderManager : MonoBehaviour
         }
         else //next drink
         {
-            currentOrder = orderQueue.Dequeue();
+            //delete current drink
+            if (currentDrinkParent.childCount > 0)
+            {
+                //remove current drink visualisation
+                Destroy(currentDrinkParent.GetChild(0));
+            }
+
+            //Move GO from queue to current
+            if (drinkListParent.childCount > 0)
+            {
+                drinkListParent.GetChild(0).transform.SetParent(currentDrinkParent);
+            }
+
+            currentOrder = orderQueue.Dequeue().GetComponent<Drink>();
         }
     }
 }
