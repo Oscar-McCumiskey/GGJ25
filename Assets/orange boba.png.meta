@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3824b6dd841b0bc4681969e0eae981d2
+guid: 23fe5801625c4f349b3fb67904c16071
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7818282904455363073
-    second: boba turn_0
+      213: -4110486042510614347
+    second: orange boba_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -165,13 +165,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boba turn_0
+      name: orange boba_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 35
-        width: 182
-        height: 63
+        x: 164
+        y: 151
+        width: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff5cd661f11ef7390800000000000000
-      internalID: -7818282904455363073
+      spriteID: 5b024fdf8be94f6c0800000000000000
+      internalID: -4110486042510614347
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      boba turn_0: -7818282904455363073
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

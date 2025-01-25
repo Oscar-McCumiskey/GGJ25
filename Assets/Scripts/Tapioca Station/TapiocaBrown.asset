@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96afa0214dcd93844a321c24eeaab8cd, type: 3}
   m_Name: TapiocaBrown
   m_EditorClassIdentifier: 
-  tapiocaSprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  tapiocaSprite: {fileID: -5931847476602843986, guid: c359980ccb3c11f45a8b872dd829d848, type: 3}
   tapiocaType: 1
