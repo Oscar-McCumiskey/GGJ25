@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orange boba_0: -4110486042510614347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
