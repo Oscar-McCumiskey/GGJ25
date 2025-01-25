@@ -1,0 +1,42 @@
+[33m3d1688d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fixing merge error by choosing our ServeStation.unity
+[33m51d0be3[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m fixed destroy transform issue
+[33m6d9f316[m Create ServeStation.unity
+[33m04ced52[m lol
+[33m0480078[m Merge pull request #6 from Oscar-McCumiskey/ServeUI
+[33m6614d45[m[33m ([m[1;31morigin/ServeUI[m[33m)[m Bell button and particles
+[33mb227bfd[m Merge pull request #5 from Oscar-McCumiskey/Tapioca
+[33mc5589c7[m Animations
+[33m702b318[m Merge branch 'main' of https://github.com/Oscar-McCumiskey/GGJ25
+[33mf5079e5[m MOVING CUPS
+[33mf24b3bf[m Merge pull request #4 from Oscar-McCumiskey/Tapioca
+[33me266786[m Added boba
+[33m1f0fd55[m Fixed tapioca buttons
+[33m21d5fec[m Fixed updates
+[33mcb63248[m Merge branch 'main' into Tapioca
+[33m82414fe[m Added UI to Boba
+[33mde4d230[m[33m ([m[1;32mcup-dispenser[m[33m)[m added cupsize change buttons updated
+[33m40e8628[m[33m ([m[1;31morigin/game-manager[m[33m, [m[1;32mgame-manager[m[33m)[m .
+[33m530cd31[m drink script and visualisation
+[33m87c3eb0[m[33m ([m[1;31morigin/cupSize[m[33m, [m[1;32mcupSize[m[33m)[m  cup size station added into scene
+[33m7071caf[m cup size scene
+[33m7da1997[m cup size scene created
+[33m51b5974[m[33m ([m[1;31morigin/milk[m[33m, [m[1;32mmilk[m[33m)[m milk max fill timer added
+[33m370b9ca[m milk station started, button down releases milk
+[33m867fdd4[m cup size enum
+[33mb26b97c[m Merge pull request #3 from Oscar-McCumiskey/Shake
+[33me85dc95[m[33m ([m[1;31morigin/Shake[m[33m)[m Reset animation (needs work on rotation)
+[33m9a73706[m Boba shake logic
+[33md57c9d1[m[33m ([m[1;31morigin/backup[m[33m, [m[1;32mbackup[m[33m)[m testing masking
+[33mc56e3a8[m Merge branch 'game-manager'
+[33m191452b[m updated gitignore
+[33mb8297c4[m forgot to save scene
+[33m842ea7a[m Merge branch 'main' of https://github.com/Oscar-McCumiskey/GGJ25 into game-manager
+[33m3f445f6[m set up score, game and order managers
+[33m1ef34b2[m Merge pull request #2 from Oscar-McCumiskey/Tapioca
+[33m0343415[m Complete base tapioca dispenser functionality
+[33m8cd2023[m Merge branch 'Tapioca' of https://github.com/Oscar-McCumiskey/GGJ25 into game-manager
+[33m75e0d4b[m game manager scene added
+[33m54beab8[m Merge pull request #1 from Oscar-McCumiskey/Tapioca
+[33mb3d0adc[m Tapioca dispenser
+[33m7b5c88d[m[33m ([m[1;32mTapioca[m[33m)[m Import Project
+[33me2b4cb2[m Initial commit
