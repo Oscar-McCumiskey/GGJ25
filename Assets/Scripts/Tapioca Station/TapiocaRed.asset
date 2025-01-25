@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96afa0214dcd93844a321c24eeaab8cd, type: 3}
-  m_Name: Temp3
+  m_Name: TapiocaRed
   m_EditorClassIdentifier: 
-  tapiocaSprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  tapiocaType: 3
+  tapiocaSprite: {fileID: -7856366313150160538, guid: 4e49c6f3504db3f42baed4ba5b5fcef9, type: 3}
+  tapiocaType: 2
