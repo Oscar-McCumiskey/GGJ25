@@ -258,7 +258,6 @@ GameObject:
   - component: {fileID: 176883965}
   - component: {fileID: 176883968}
   - component: {fileID: 176883967}
-  - component: {fileID: 176883966}
   - component: {fileID: 176883969}
   m_Layer: 5
   m_Name: Strawberry Milk Button
@@ -286,19 +285,6 @@ RectTransform:
   m_AnchoredPosition: {x: 221, y: -94.07391}
   m_SizeDelta: {x: 117.1129, y: 98.8715}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &176883966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176883964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5d3f3243fdd564a92d2f4024770457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isButtonDown: 0
 --- !u!114 &176883967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,53 +332,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 176883964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ba5492ba19cba846b66a683cb52b532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 176883967}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1085888958}
-        m_TargetAssemblyTypeName: MilkDispenser, Assembly-CSharp
-        m_MethodName: SetStrawberryMilk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isButtonDown: 0
 --- !u!1 &276138498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7505619947567578599, guid: 2241619bde78b2f4d8bd4ad8fc766fae, type: 3}
@@ -556,6 +499,11 @@ Transform:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 9043575456428741433, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
   m_PrefabInstance: {fileID: 1947634494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &493183550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3603215075094797575, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+  m_PrefabInstance: {fileID: 1914147042}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &558280927
 GameObject:
@@ -967,7 +915,6 @@ GameObject:
   - component: {fileID: 977461948}
   - component: {fileID: 977461951}
   - component: {fileID: 977461950}
-  - component: {fileID: 977461949}
   - component: {fileID: 977461952}
   m_Layer: 5
   m_Name: Matcha milk button
@@ -995,19 +942,6 @@ RectTransform:
   m_AnchoredPosition: {x: -59, y: -94.07391}
   m_SizeDelta: {x: 117.1129, y: 98.8715}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &977461949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977461947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5d3f3243fdd564a92d2f4024770457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isButtonDown: 0
 --- !u!114 &977461950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,53 +989,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 977461947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 95e7530049bbf644ca96e503e6fd5c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 977461950}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1085888958}
-        m_TargetAssemblyTypeName: MilkDispenser, Assembly-CSharp
-        m_MethodName: SetMatchaMilk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isButtonDown: 0
 --- !u!1 &1059368739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,17 +1115,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 3497995428447419418, guid: b25cbebafffa8a84ca21d79f6fcbab27, type: 3}
   m_PrefabInstance: {fileID: 162586822}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1085888958 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-  m_PrefabInstance: {fileID: 1914147042}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14ca15e5a4b0b34a89e402dd50b1bd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1158126526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,18 +2084,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9141556386884708082, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
   m_PrefabInstance: {fileID: 1914147042}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1741788549 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3575690217405973157, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-  m_PrefabInstance: {fileID: 1914147042}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741788547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1741788552
+--- !u!114 &1741788548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2224,53 +2093,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741788547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 17cce0dbb0ee09f458c710e5dd6f1ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1741788549}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1085888958}
-        m_TargetAssemblyTypeName: MilkDispenser, Assembly-CSharp
-        m_MethodName: SetMangoMilk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isButtonDown: 0
 --- !u!1001 &1914147042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2332,6 +2158,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3791798800946856667, guid: 8fefc83c78573884bb6add73fb9b6334, type: 3}
     - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: matchaMilk
+      value: 
+      objectReference: {fileID: -815510375906158792, guid: 5d03c8ec492f6dc47826c0b7b5b6bb64, type: 3}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: milkStream
+      value: 
+      objectReference: {fileID: 493183550}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: buttonScript
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: milkStreamGO
+      value: 
+      objectReference: {fileID: 493183550}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: chocolateMilk
+      value: 
+      objectReference: {fileID: -7044339365554598671, guid: ca264a2d05f1547439ad7bd5b97f836f, type: 3}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: chcocolateMilk
       value: 
       objectReference: {fileID: -7044339365554598671, guid: ca264a2d05f1547439ad7bd5b97f836f, type: 3}
@@ -2348,9 +2194,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1067422206651620841, guid: 30ac6d5ad1b60dc47898dd2c5f8f9095, type: 3}
     - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: matchaMilkStream
+      value: 
+      objectReference: {fileID: -5123509715502970260, guid: 169be14f024144f489ce9733c6415e07, type: 3}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: mangoButtonScript
+      value: 
+      objectReference: {fileID: 1741788548}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: milkSpawnLocation
       value: 
       objectReference: {fileID: 1987285408}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: matchaButtonScript
+      value: 
+      objectReference: {fileID: 977461952}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: chocolateMilkStream
+      value: 
+      objectReference: {fileID: 1592684291911520096, guid: 37bb727619cdded43ab54f1ea74a1905, type: 3}
     - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: chcocolateMilkStream
       value: 
@@ -2359,6 +2221,14 @@ PrefabInstance:
       propertyPath: strawberryMilkStream
       value: 
       objectReference: {fileID: -8364231664730354153, guid: 4943eaa03e8d99e4c9369b4479078bc4, type: 3}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: chocolateButtonScript
+      value: 
+      objectReference: {fileID: 2123476784}
+    - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: strawberryButtonScript
+      value: 
+      objectReference: {fileID: 176883969}
     - target: {fileID: 4923715474599543624, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2447,6 +2317,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1161187644}
+    - target: {fileID: 8115944579855651214, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_Name
+      value: MilkStream
+      objectReference: {fileID: 0}
     - target: {fileID: 8438805188235745269, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2455,7 +2329,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mango milk button
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 93842403782133773, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4923715474599543624, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
@@ -2469,8 +2344,8 @@ PrefabInstance:
       addedObject: {fileID: 176883965}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9141556386884708082, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1741788552}
+      insertIndex: -1
+      addedObject: {fileID: 1741788548}
   m_SourcePrefab: {fileID: 100100000, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
 --- !u!1 &1915689824
 GameObject:
@@ -2825,7 +2700,6 @@ GameObject:
   - component: {fileID: 2123476780}
   - component: {fileID: 2123476783}
   - component: {fileID: 2123476782}
-  - component: {fileID: 2123476781}
   - component: {fileID: 2123476784}
   m_Layer: 5
   m_Name: Chocolate milk button
@@ -2853,19 +2727,6 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -94.07391}
   m_SizeDelta: {x: 117.1129, y: 98.8715}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &2123476781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123476779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5d3f3243fdd564a92d2f4024770457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isButtonDown: 0
 --- !u!114 &2123476782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2913,53 +2774,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123476779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: c9878ecfc6617774193391e0a2ed6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2123476782}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1085888958}
-        m_TargetAssemblyTypeName: MilkDispenser, Assembly-CSharp
-        m_MethodName: SetChocolateMilk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isButtonDown: 0
 --- !u!1001 &3812892732890543486
 PrefabInstance:
   m_ObjectHideFlags: 0

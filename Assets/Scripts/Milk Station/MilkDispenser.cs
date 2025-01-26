@@ -13,9 +13,13 @@ public class MilkDispenser : MonoBehaviour
     [SerializeField] private Transform milkStream;
     [SerializeField] private Transform milkStreamGO;
     [SerializeField] private float milkSpeed;
-    [SerializeField] private ButtonHeld buttonScript;
+    [SerializeField] private ButtonHeldMango mangoButtonScript;
+    [SerializeField] private ButtonHeldChocolate chocolateButtonScript;
+    [SerializeField] private ButtonHeldMatcha matchaButtonScript;
+    [SerializeField] private ButtonHeldStrawberry strawberryButtonScript;
     private bool milkPouring = false;
     public bool hitBottom = false;
+    public bool holding = false;
 
     [SerializeField] private Sprite mangoMilk;
     [SerializeField] private Sprite strawberryMilk;
@@ -51,7 +55,17 @@ public class MilkDispenser : MonoBehaviour
 
     private void Update()
     {
-        if (buttonScript.isButtonDown)
+        //if any button is active
+        if(mangoButtonScript.isButtonDown || matchaButtonScript.isButtonDown || strawberryButtonScript.isButtonDown || chocolateButtonScript.isButtonDown)
+        {
+            holding = true;
+        }
+        else
+        {
+            holding = false;
+        }
+
+        if (holding)
         {
             //Dispenses milk
             Dispense();
@@ -96,7 +110,7 @@ public class MilkDispenser : MonoBehaviour
     {
         while (milkStream.transform.position.y > (milkEndPoint.transform.position.y))
         {
-            if (!buttonScript.isButtonDown)
+            if (!holding)
             {
                 milkPouring = false;
                 break;
@@ -126,20 +140,24 @@ public class MilkDispenser : MonoBehaviour
     public void SetStrawberryMilk()
     {
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
+        GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = strawberryMilk;
     }
 
     public void SetMangoMilk()
     {
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = mangoMilkStream;
+        GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = mangoMilk;
     }
 
     public void SetMatchaMilk()
     {
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = matchaMilkStream;
+        GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = matchaMilk;
     }
 
     public void SetChocolateMilk()
     {
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = chocolateMilkStream;
+        GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = chocolateMilk;
     }
 }

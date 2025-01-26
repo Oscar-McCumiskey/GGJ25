@@ -4,12 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonHeld : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class ButtonHeldMatcha : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool isButtonDown;
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        MilkDispenser.Instance.SetMatchaMilk();
         isButtonDown = true;
     }
 
