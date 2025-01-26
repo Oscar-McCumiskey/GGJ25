@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7580131615419533649}
   m_Layer: 0
   m_Name: Tapioca
-  m_TagString: Untagged
+  m_TagString: Tapioca
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.13, y: 5.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7856366313150160538, guid: 4e49c6f3504db3f42baed4ba5b5fcef9, type: 3}
+  m_Sprite: {fileID: -4110486042510614347, guid: 23fe5801625c4f349b3fb67904c16071, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

@@ -98,34 +98,42 @@ public class ShakeCup : MonoBehaviour
     
     private void OnMouseDown()
     {
-        dragging = true;
-        
-        // hide cursor
-        Cursor.visible = false;
-        
-        // temp
-        cupTopCollider.enabled = true;
+        if (GameManager.Instance.currentStation == STATION_TYPE.SHAKE)
+        {
+
+            dragging = true;
+
+            // hide cursor
+            Cursor.visible = false;
+
+            // temp
+            cupTopCollider.enabled = true;
+
+        }
     }
 
     private void OnMouseUp()
     {
-        dragging = false;
-        rb.velocity = Vector2.zero;
-        rb.angularVelocity = 0;
-        
-        // show cursor
-        Cursor.visible = true;
-        
-        // apply return rotation
-        if (transform.rotation.eulerAngles.z > 0)
+        if (GameManager.Instance.currentStation == STATION_TYPE.SHAKE)
         {
-            // rotate to 0 CW or ACW, no idea
-            rb.totalTorque = -1000;
-        }
-        else if (transform.rotation.eulerAngles.z < 0)
-        {
-            // rotate to 0 CW or ACW, no idea
-            rb.totalTorque = 1000;
+            dragging = false;
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
+
+            // show cursor
+            Cursor.visible = true;
+
+            // apply return rotation
+            if (transform.rotation.eulerAngles.z > 0)
+            {
+                // rotate to 0 CW or ACW, no idea
+                rb.totalTorque = -1000;
+            }
+            else if (transform.rotation.eulerAngles.z < 0)
+            {
+                // rotate to 0 CW or ACW, no idea
+                rb.totalTorque = 1000;
+            }
         }
     }
 }
