@@ -38,7 +38,6 @@ public class ChangeCupSize : MonoBehaviour
 
     public void MediumCup()
     {
-        Debug.Log("Medium Cup");
         mediumCup.SetActive(true);
         mediumCup.transform.position = cupSpawnPoint.transform.position;
         currentCup = mediumCup.transform;

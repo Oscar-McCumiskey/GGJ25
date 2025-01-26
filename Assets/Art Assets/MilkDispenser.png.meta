@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: fbbe72fba71edeb4d8993e434b62873d
+guid: 304bdb2a02a895c4aad1a6c3917eab10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9179248568436210976
-    second: MilkDispenser_0
-  - first:
-      213: -1565434034636578979
-    second: MilkDispenser_1
+      213: 2601251895158868729
+    second: MilkDispenser 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,10 +49,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.11116255, y: 0.35364914}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 29, y: 150, z: 1079, w: 403}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -103,43 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MilkDispenser_0
+      name: MilkDispenser 1_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 152
-        width: 217
-        height: 450
+        x: 0
+        y: 527
+        width: 1185
+        height: 474
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02d37a270fd336f70800000000000000
-      internalID: 9179248568436210976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MilkDispenser_1
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 489
-        width: 38
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5f1e2e1a06764ae0800000000000000
-      internalID: -1565434034636578979
+      spriteID: 9fa814e01d0891420800000000000000
+      internalID: 2601251895158868729
       vertices: []
       indices: 
       edges: []
@@ -147,16 +123,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MilkDispenser_0: 9179248568436210976
-      MilkDispenser_1: -1565434034636578979
+      MilkDispenser 1_0: 2601251895158868729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
