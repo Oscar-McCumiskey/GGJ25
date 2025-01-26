@@ -1333,7 +1333,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285890efeeccf7344884eae537c009e9, type: 3}
-
 --- !u!114 &1660190811 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5796645320648506027, guid: c451e4887ee443541b7bad0a306e2d5b, type: 3}
@@ -1376,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: milkSpawnLocation
       value: 
-      objectReference: {fileID: 1611193573}
+      objectReference: {fileID: 1987285408}
     - target: {fileID: 4923715474599543624, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1713,6 +1712,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1987285408 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2584675752729602955, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+  m_PrefabInstance: {fileID: 1914147042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3812892732890543486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1909,8 +1913,6 @@ SceneRoots:
   - {fileID: 793293590}
   - {fileID: 1270560609}
   - {fileID: 3812892732890543486}
-  - {fileID: 1534717146}
   - {fileID: 1955838629}
-  - {fileID: 1609543411}
   - {fileID: 804692181}
   - {fileID: 1059368741}

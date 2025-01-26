@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      brown twist_0: 576271978021366494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
