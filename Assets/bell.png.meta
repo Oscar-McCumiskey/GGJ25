@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: de4bfc713156b36489ce76a96f93105b
+guid: cd1453981f9db5647a0aca1e41bb3181
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1320564497565126315
-    second: RecipeSheet 1_0
+      213: 3616512531535755360
+    second: bell_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RecipeSheet 1_0
+      name: bell_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 242
-        height: 308
+        x: 173
+        y: 13
+        width: 303
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55173ab06996cade0800000000000000
-      internalID: -1320564497565126315
+      spriteID: 068ffef7cfe603230800000000000000
+      internalID: 3616512531535755360
       vertices: []
       indices: 
       edges: []
@@ -123,15 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d5b7a24480ac3e447991fc2656fd9648
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      RecipeSheet 1_0: -1320564497565126315
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
