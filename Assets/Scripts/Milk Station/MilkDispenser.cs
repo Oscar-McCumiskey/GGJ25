@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MilkDispenser : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class MilkDispenser : MonoBehaviour
 
     [SerializeField] private Transform milkSpawnLocation;
     [SerializeField] private Transform milkEndPoint;
-    [SerializeField] private Transform milk;
+    [SerializeField] private Transform milkStream;
+    [SerializeField] private Transform milkStreamGO;
     [SerializeField] private float milkSpeed;
     [SerializeField] private ButtonHeld buttonScript;
     private bool milkPouring = false;
@@ -17,12 +19,12 @@ public class MilkDispenser : MonoBehaviour
 
     [SerializeField] private Sprite mangoMilk;
     [SerializeField] private Sprite strawberryMilk;
-    [SerializeField] private Sprite chcocolateMilk;
-    [SerializeField] private Sprite MatchMilk;
+    [SerializeField] private Sprite chocolateMilk;
+    [SerializeField] private Sprite matchaMilk;
     [SerializeField] private Sprite mangoMilkStream;
     [SerializeField] private Sprite strawberryMilkStream;
-    [SerializeField] private Sprite chcocolateMilkStream;
-    [SerializeField] private Sprite MatchMilkStream;
+    [SerializeField] private Sprite chocolateMilkStream;
+    [SerializeField] private Sprite matchaMilkStream;
 
     float maxFillTime = 0;
     float currentFillTime = 0;
@@ -30,7 +32,7 @@ public class MilkDispenser : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -49,16 +51,16 @@ public class MilkDispenser : MonoBehaviour
 
     private void Update()
     {
-        if(buttonScript.isButtonDown)
+        if (buttonScript.isButtonDown)
         {
             //Dispenses milk
             Dispense();
 
             //check overfilled
-            if(currentFillTime >= overFillTime)
+            if (currentFillTime >= overFillTime)
             {
                 Debug.Log("TOO FILLED");
-            } 
+            }
 
         }
         else
@@ -72,7 +74,6 @@ public class MilkDispenser : MonoBehaviour
             //update fill amount with time 
             currentFillTime += Time.deltaTime;
 
-            Debug.Log("HIT BOTTOM");
             GameManager.Instance.currentCup.transform.GetChild(0).gameObject.SetActive(true);
             GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<Milk>().IncreaseMilk();
         }
@@ -84,7 +85,7 @@ public class MilkDispenser : MonoBehaviour
     public void Dispense()
     {
         //pour milk only if not already pouring
-        if(!milkPouring)
+        if (!milkPouring)
         {
             milkPouring = true;
             StartCoroutine(lowerMilk());
@@ -93,9 +94,9 @@ public class MilkDispenser : MonoBehaviour
 
     IEnumerator lowerMilk()
     {
-        while(milk.transform.position.y > (milkEndPoint.transform.position.y))
+        while (milkStream.transform.position.y > (milkEndPoint.transform.position.y))
         {
-            if(!buttonScript.isButtonDown)
+            if (!buttonScript.isButtonDown)
             {
                 milkPouring = false;
                 break;
@@ -107,7 +108,7 @@ public class MilkDispenser : MonoBehaviour
                 break;
             }
 
-            milk.transform.position = new Vector3(milk.transform.position.x, milk.transform.position.y - milkSpeed * Time.deltaTime, milk.transform.position.z);
+            milkStream.transform.position = new Vector3(milkStream.transform.position.x, milkStream.transform.position.y - milkSpeed * Time.deltaTime, milkStream.transform.position.z);
             yield return null;
         }
 
@@ -119,6 +120,26 @@ public class MilkDispenser : MonoBehaviour
 
     private void ResetMilk()
     {
-        milk.transform.position = milkSpawnLocation.transform.position;
+        milkStream.transform.position = milkSpawnLocation.transform.position;
+    }
+
+    public void SetStrawberryMilk()
+    {
+        milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
+    }
+
+    public void SetMangoMilk()
+    {
+        milkStreamGO.GetComponent<SpriteRenderer>().sprite = mangoMilkStream;
+    }
+
+    public void SetMatchaMilk()
+    {
+        milkStreamGO.GetComponent<SpriteRenderer>().sprite = matchaMilkStream;
+    }
+
+    public void SetChocolateMilk()
+    {
+        milkStreamGO.GetComponent<SpriteRenderer>().sprite = chocolateMilkStream;
     }
 }
