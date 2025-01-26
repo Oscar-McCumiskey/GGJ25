@@ -50,7 +50,7 @@ public class MilkDispenser : MonoBehaviour
             //check overfilled
             if(currentFillTime >= overFillTime)
             {
-                //do something
+                //do something  
                 Debug.Log("TOO FILLED");
             }
         }
@@ -61,9 +61,6 @@ public class MilkDispenser : MonoBehaviour
     /// </summary>
     public void Dispense()
     {
-        //Debug.Log("milk start y: " + milk.transform.position.y);
-        //Debug.Log("milk end y: " + milkEndPoint.transform.position.y);  
-
         //pour milk only if not already pouring
         if(!milkPouring)
         {
