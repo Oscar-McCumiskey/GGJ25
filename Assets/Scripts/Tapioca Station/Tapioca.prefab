@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8019419747910583054}
   - component: {fileID: 7460130806097005759}
   - component: {fileID: 7580131615419533649}
+  - component: {fileID: 1335038767187527226}
   m_Layer: 0
   m_Name: Tapioca
   m_TagString: Tapioca
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -4110486042510614347, guid: 23fe5801625c4f349b3fb67904c16071, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: -7856366313150160538, guid: 4e49c6f3504db3f42baed4ba5b5fcef9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,3 +152,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1335038767187527226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323969999726328637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c911bf5c80c6c4f8a782bc0c19536b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,7 +11,9 @@ public class TapiocaDispenser : MonoBehaviour
     {
         if (currentTapiocaType != TAPIOCA_TYPE.NONE)
         {
-            Instantiate(tapiocaPrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>().velocity = Vector2.down * 100f;
+            GameObject spawnedTapioca = Instantiate(tapiocaPrefab, transform.position, Quaternion.identity);
+            spawnedTapioca.GetComponent<Rigidbody2D>().velocity = Vector2.down * 100f;
+            spawnedTapioca.GetComponent<Tapioca>().setTapiocaType(currentTapiocaType);
 
             OrderManager.Instance.currentOrder.CheckTapiocaType(currentTapiocaType);
         }

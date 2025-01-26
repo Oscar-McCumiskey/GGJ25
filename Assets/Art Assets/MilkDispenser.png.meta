@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MilkDispenser_0: 9179248568436210976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,5 +7,6 @@ public enum MILK_TYPE
     NONE,
     STAWBERRY,
     CHOCOLATE,
-    MANGO
+    MANGO,
+    MATCHA
 }

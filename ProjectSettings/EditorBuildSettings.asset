@@ -5,13 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/MainBobaSimScene.unity
-    guid: f002f8963ade4154eb4992233bfca215
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cc1e1b76bb1d4c4a810bd0c08c4882b
+  - enabled: 1
+    path: Assets/Scenes/MainBobaSimScene.unity
+    guid: f002f8963ade4154eb4992233bfca215
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
