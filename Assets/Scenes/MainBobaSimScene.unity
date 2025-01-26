@@ -1153,6 +1153,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285890efeeccf7344884eae537c009e9, type: 3}
+--- !u!224 &1611193573 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2584675752729602955, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+  m_PrefabInstance: {fileID: 1914147042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1660190811 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5796645320648506027, guid: c451e4887ee443541b7bad0a306e2d5b, type: 3}
@@ -1180,34 +1185,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38960201}
-    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_Size.x
-      value: 11.85
+    - target: {fileID: 2584675752729602955, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_Size.y
-      value: 4.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2601251895158868729, guid: 304bdb2a02a895c4aad1a6c3917eab10, type: 3}
-    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3603215075094797575, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7
+    - target: {fileID: 2584675752729602955, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 490
       objectReference: {fileID: 0}
     - target: {fileID: 3623065432321065531, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38960201}
     - target: {fileID: 4259194635568092966, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: milkSpeed
-      value: 1200
-      objectReference: {fileID: 0}
+      propertyPath: milkSpawnLocation
+      value: 
+      objectReference: {fileID: 1611193573}
     - target: {fileID: 4923715474599543624, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1292,18 +1285,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1161187644}
-    - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -288
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 322
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

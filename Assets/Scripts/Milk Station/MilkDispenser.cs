@@ -7,7 +7,7 @@ public class MilkDispenser : MonoBehaviour
 {
     public static MilkDispenser Instance;
 
-    private Vector3 milkSpawnLocation;
+    [SerializeField] private Transform milkSpawnLocation;
     [SerializeField] private Transform milkEndPoint;
     [SerializeField] private Transform milk;
     [SerializeField] private float milkSpeed;
@@ -36,6 +36,8 @@ public class MilkDispenser : MonoBehaviour
         maxFillTime = 3f;
         overFillTime = 6f;
         currentFillTime = 0;
+
+        Debug.Log("SPAWN POS: " + milkSpawnLocation.transform.position);
     }
 
     private void Update()
@@ -56,18 +58,11 @@ public class MilkDispenser : MonoBehaviour
                 Debug.Log("TOO FILLED");
             } 
         }
-        else 
+        else
         {
-            if (resetOnce)
-            {
-                Debug.Log("Resetting"); 
-                milk.transform.position = milkSpawnLocation;
-                Debug.Log(milkSpawnLocation + " & " + milk.transform.position);
-                resetOnce = false;
-            }
+            Debug.Log("reseting milk");
+            ResetMilk();
         }
-        
-        
     }
 
     /// <summary>
@@ -78,7 +73,6 @@ public class MilkDispenser : MonoBehaviour
         //pour milk only if not already pouring
         if(!milkPouring)
         {
-            milkSpawnLocation = milk.transform.position;
             milkPouring = true;
             StartCoroutine(lowerMilk());
         }
@@ -108,5 +102,11 @@ public class MilkDispenser : MonoBehaviour
         milkPouring = false;
         resetOnce = true;
         yield return null;
+    }
+
+    private void ResetMilk()
+    {
+        milk.transform.position = milkSpawnLocation.transform.position;
+        Debug.Log("CURRENT MILK POS: " + milk.transform.position + ", ORIGINAL POS " + milkSpawnLocation.transform.position);
     }
 }
