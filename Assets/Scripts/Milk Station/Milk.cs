@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MILK_TYPE
+public class Milk : MonoBehaviour
 {
-    NONE,
-    STAWBERRY,
-    CHOCOLATE,
-    MANGO
+    
 }

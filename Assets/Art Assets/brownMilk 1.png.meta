@@ -107,8 +107,8 @@ TextureImporter:
         y: 39
         width: 570
         height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49492744, y: 0.9975448}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,14 +123,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 726e0f649f03436489b61190fdabb53c
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      brownMilk 1_0: -7044339365554598671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

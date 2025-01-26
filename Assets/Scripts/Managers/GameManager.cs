@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
     
     public STATION_TYPE currentStation = STATION_TYPE.CUP;
 
+    public GameObject currentCup;
+
+    public GameObject largeCup;
+    public GameObject mediumCup;
+    public GameObject smallCup;
+
     private void Awake()
     {
         if(Instance == null)
@@ -22,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        currentCup = null;
         StartGame();
     }
 

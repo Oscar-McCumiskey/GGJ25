@@ -12,6 +12,8 @@ public class Drink : MonoBehaviour
     public TAPIOCA_TYPE tapiocaType = TAPIOCA_TYPE.NONE;
     public MILK_TYPE milkType = MILK_TYPE.NONE;
 
+    //to find cup ref
+
     //Drink checks - we need this to judge score
     bool correctTapioca = false;
     bool correctCupSize = false;
@@ -47,6 +49,24 @@ public class Drink : MonoBehaviour
     {
         isThereACup = true;
         correctCupSize = cupSizeInput == cupSize;
+
+        if (correctCupSize)
+        {
+            if(cupSizeInput == CUP_SIZE.SMALL)
+            {
+                GameManager.Instance.currentCup = GameManager.Instance.smallCup;
+            }
+            else if(cupSizeInput == CUP_SIZE.MEDIUM)
+            {
+                GameManager.Instance.currentCup = GameManager.Instance.mediumCup;
+            }
+            else
+            {
+                GameManager.Instance.currentCup = GameManager.Instance.largeCup;
+            }
+
+        }
+
     }
 
     public void CheckTapiocaType(TAPIOCA_TYPE tapiocaTypeInput)
