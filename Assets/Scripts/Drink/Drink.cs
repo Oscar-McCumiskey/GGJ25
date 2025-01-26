@@ -7,19 +7,17 @@ using UnityEngine;
 /// </summary>
 public class Drink : MonoBehaviour
 {
+    //Drink details
     public CUP_SIZE cupSize = CUP_SIZE.NONE;
     public TAPIOCA_TYPE tapiocaType = TAPIOCA_TYPE.NONE;
     public MILK_TYPE milkType = MILK_TYPE.NONE;
 
+    //Drink checks - we need this to judge score
     bool correctTapioca = false;
     bool correctCupSize = false;
     bool correctMilkType = false;
-    
-    //quantities
     float milkQuantityPercentage;
-
-    //order time taken to calcualte score
-    private float timeScore = 1000;
+    private float timeScore = 1000; //order time taken to calcualte score
 
     public void Reset()
     {

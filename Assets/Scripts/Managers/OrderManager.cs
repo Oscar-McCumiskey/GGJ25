@@ -15,8 +15,6 @@ public class OrderManager : MonoBehaviour
     public Queue<Drink> orderQueue {  get; private set; } //order queue
     Drink currentOrder;
 
-  
-
     private void Awake()
     {
         if (Instance == null)
