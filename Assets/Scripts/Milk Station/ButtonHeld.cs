@@ -11,13 +11,11 @@ public class ButtonHeld : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         isButtonDown = true;
-        Debug.Log("Down");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         isButtonDown = false;
-        Debug.Log("up");
     }
 
 }

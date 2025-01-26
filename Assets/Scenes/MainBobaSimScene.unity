@@ -1180,6 +1180,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 38960201}
+    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_Size.x
+      value: 11.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_Size.y
+      value: 4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2601251895158868729, guid: 304bdb2a02a895c4aad1a6c3917eab10, type: 3}
+    - target: {fileID: 2000905343885375235, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603215075094797575, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3623065432321065531, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1274,11 +1294,15 @@ PrefabInstance:
       objectReference: {fileID: 1161187644}
     - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 107.16312
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -288
       objectReference: {fileID: 0}
     - target: {fileID: 7266719162424359176, guid: b45a50d455a664d4c879d0c247bdaf54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 329.11
+      value: 322
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

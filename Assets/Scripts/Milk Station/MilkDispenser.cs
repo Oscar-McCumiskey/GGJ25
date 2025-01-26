@@ -7,12 +7,13 @@ public class MilkDispenser : MonoBehaviour
 {
     public static MilkDispenser Instance;
 
-    [SerializeField] private Transform milkSpawnLocation;
+    private Vector3 milkSpawnLocation;
     [SerializeField] private Transform milkEndPoint;
     [SerializeField] private Transform milk;
     [SerializeField] private float milkSpeed;
     [SerializeField] private ButtonHeld buttonScript;
     private bool milkPouring = false;
+    private bool resetOnce = false;
 
     float maxFillTime = 0;
     float currentFillTime = 0;
@@ -51,9 +52,22 @@ public class MilkDispenser : MonoBehaviour
             if(currentFillTime >= overFillTime)
             {
                 //do something  
+                resetOnce = true;
                 Debug.Log("TOO FILLED");
+            } 
+        }
+        else 
+        {
+            if (resetOnce)
+            {
+                Debug.Log("Resetting"); 
+                milk.transform.position = milkSpawnLocation;
+                Debug.Log(milkSpawnLocation + " & " + milk.transform.position);
+                resetOnce = false;
             }
         }
+        
+        
     }
 
     /// <summary>
@@ -64,6 +78,7 @@ public class MilkDispenser : MonoBehaviour
         //pour milk only if not already pouring
         if(!milkPouring)
         {
+            milkSpawnLocation = milk.transform.position;
             milkPouring = true;
             StartCoroutine(lowerMilk());
         }
@@ -89,7 +104,9 @@ public class MilkDispenser : MonoBehaviour
             yield return null;
         }
 
+        //reset 
         milkPouring = false;
+        resetOnce = true;
         yield return null;
     }
 }
