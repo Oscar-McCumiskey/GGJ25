@@ -32,9 +32,98 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 344}
+  m_AnchoredPosition: {x: 8, y: 676}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1322763205894089047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8278842205481708336}
+  - component: {fileID: 2349940371254944644}
+  - component: {fileID: 6984161873773914942}
+  - component: {fileID: 3572772659768332411}
+  m_Layer: 5
+  m_Name: Strawberry Milk Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8278842205481708336
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322763205894089047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4923715474599543624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 221, y: -94.07391}
+  m_SizeDelta: {x: 117.1129, y: 98.8715}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &2349940371254944644
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322763205894089047}
+  m_CullTransparentMesh: 1
+--- !u!114 &6984161873773914942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322763205894089047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3572772659768332411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322763205894089047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba5492ba19cba846b66a683cb52b532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isButtonDown: 0
 --- !u!1 &1381311041093458158
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,15 +151,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381311041093458158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1731121547827707012}
+  - {fileID: 1456328330655542898}
+  - {fileID: 2531007443762093808}
+  - {fileID: 8278842205481708336}
   - {fileID: 6468543604455205153}
   - {fileID: 434659337886502397}
-  - {fileID: 2584675752729602955}
   - {fileID: 3603215075094797575}
+  - {fileID: 2584675752729602955}
   - {fileID: 6510997064738727386}
   - {fileID: 2482942503192984748}
   - {fileID: 7266719162424359176}
@@ -78,9 +170,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 3840, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6251669725154390624
 Canvas:
   m_ObjectHideFlags: 0
@@ -126,7 +218,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8308214844400528986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +368,95 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1950040987609487032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456328330655542898}
+  - component: {fileID: 9014995749495989331}
+  - component: {fileID: 6882838219153246552}
+  - component: {fileID: 1995465890098954622}
+  m_Layer: 5
+  m_Name: Matcha milk button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456328330655542898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950040987609487032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4923715474599543624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -59, y: -94.07391}
+  m_SizeDelta: {x: 117.1129, y: 98.8715}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &9014995749495989331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950040987609487032}
+  m_CullTransparentMesh: 1
+--- !u!114 &6882838219153246552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950040987609487032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1995465890098954622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950040987609487032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e7530049bbf644ca96e503e6fd5c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isButtonDown: 0
 --- !u!1 &3292255514591544059
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 5482331536675970578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.84, z: 0}
+  m_LocalPosition: {x: 0, y: 5.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -516,7 +697,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2601251895158868729, guid: 304bdb2a02a895c4aad1a6c3917eab10, type: 3}
+  m_Sprite: {fileID: 9179248568436210976, guid: 304bdb2a02a895c4aad1a6c3917eab10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -539,11 +720,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14ca15e5a4b0b34a89e402dd50b1bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  milkSpawnLocation: {fileID: 3603215075094797575}
+  milkSpawnLocation: {fileID: 2584675752729602955}
   milkEndPoint: {fileID: 6510997064738727386}
-  milk: {fileID: 3603215075094797575}
+  milkStream: {fileID: 3603215075094797575}
+  milkStreamGO: {fileID: 3603215075094797575}
   milkSpeed: 1200
-  buttonScript: {fileID: 93842403782133773}
+  mangoButtonScript: {fileID: 1992989165905045987}
+  chocolateButtonScript: {fileID: 2489980382581507805}
+  matchaButtonScript: {fileID: 1995465890098954622}
+  strawberryButtonScript: {fileID: 3572772659768332411}
+  hitBottom: 0
+  holding: 0
+  mangoMilk: {fileID: 3791798800946856667, guid: 8fefc83c78573884bb6add73fb9b6334, type: 3}
+  strawberryMilk: {fileID: 8360905402601443511, guid: e5191da19669df54f955729d677c782d, type: 3}
+  chocolateMilk: {fileID: -7044339365554598671, guid: ca264a2d05f1547439ad7bd5b97f836f, type: 3}
+  matchaMilk: {fileID: -815510375906158792, guid: 5d03c8ec492f6dc47826c0b7b5b6bb64, type: 3}
+  mangoMilkStream: {fileID: -1067422206651620841, guid: 30ac6d5ad1b60dc47898dd2c5f8f9095, type: 3}
+  strawberryMilkStream: {fileID: -8364231664730354153, guid: 4943eaa03e8d99e4c9369b4479078bc4, type: 3}
+  chocolateMilkStream: {fileID: 1592684291911520096, guid: 37bb727619cdded43ab54f1ea74a1905, type: 3}
+  matchaMilkStream: {fileID: -5123509715502970260, guid: 169be14f024144f489ce9733c6415e07, type: 3}
 --- !u!1 &7007509168378128115
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,12 +764,101 @@ Transform:
   m_GameObject: {fileID: 7007509168378128115}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -300, z: 0}
+  m_LocalPosition: {x: 0, y: -197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4923715474599543624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7871079261458838100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2531007443762093808}
+  - component: {fileID: 703412130854254309}
+  - component: {fileID: 8253184830161820639}
+  - component: {fileID: 2489980382581507805}
+  m_Layer: 5
+  m_Name: Chocolate milk button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2531007443762093808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871079261458838100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4923715474599543624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 75, y: -94.07391}
+  m_SizeDelta: {x: 117.1129, y: 98.8715}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &703412130854254309
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871079261458838100}
+  m_CullTransparentMesh: 1
+--- !u!114 &8253184830161820639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871079261458838100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2489980382581507805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871079261458838100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9878ecfc6617774193391e0a2ed6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isButtonDown: 0
 --- !u!1 &8115944579855651214
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +870,7 @@ GameObject:
   - component: {fileID: 3603215075094797575}
   - component: {fileID: 6125843224374093627}
   m_Layer: 0
-  m_Name: Milk
+  m_Name: MilkStream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,7 +956,7 @@ GameObject:
   - component: {fileID: 2482942503192984748}
   - component: {fileID: 4341841495457138132}
   - component: {fileID: 918821625297321550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HIDE MILK MASK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,9 +1051,9 @@ GameObject:
   - component: {fileID: 1731121547827707012}
   - component: {fileID: 3290604284615274648}
   - component: {fileID: 3575690217405973157}
-  - component: {fileID: 93842403782133773}
+  - component: {fileID: 1992989165905045987}
   m_Layer: 5
-  m_Name: milk button
+  m_Name: Mango milk button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,8 +1075,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.175, y: -10.799805}
-  m_SizeDelta: {x: 205.6682, y: 442.2699}
+  m_AnchoredPosition: {x: -193, y: -94.07391}
+  m_SizeDelta: {x: 117.1129, y: 98.8715}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3290604284615274648
 CanvasRenderer:
@@ -832,7 +1116,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &93842403782133773
+--- !u!114 &1992989165905045987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -841,7 +1125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9141556386884708082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5d3f3243fdd564a92d2f4024770457, type: 3}
+  m_Script: {fileID: 11500000, guid: 17cce0dbb0ee09f458c710e5dd6f1ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonDown: 0

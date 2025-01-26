@@ -108,7 +108,7 @@ public class MilkDispenser : MonoBehaviour
 
     IEnumerator lowerMilk()
     {
-        while (milkStream.transform.position.y > (milkEndPoint.transform.position.y))
+        while (milkStream.transform.position.y > milkEndPoint.transform.position.y + 500)
         {
             if (!holding)
             {
@@ -139,24 +139,29 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetStrawberryMilk()
     {
+        
+        if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = strawberryMilk;
     }
 
     public void SetMangoMilk()
     {
+        if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = mangoMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = mangoMilk;
     }
 
     public void SetMatchaMilk()
     {
+        if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = matchaMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = matchaMilk;
     }
 
     public void SetChocolateMilk()
     {
+        if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = chocolateMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = chocolateMilk;
     }

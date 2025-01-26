@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// Responsible for Creating and Queuing orders
@@ -11,6 +12,14 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
     [SerializeField] private Transform drinkListParent;
     [SerializeField] private Transform currentDrinkParent;
+
+    [SerializeField] private GameObject tapiocaImage;
+    [SerializeField] private GameObject cupSizeImage;
+    [SerializeField] private GameObject milkImage;
+    
+    [SerializeField] private Sprite[] tapiocaSprites;
+    [SerializeField] private Sprite[] cupSprites;
+    [SerializeField] private Sprite[] milkSprites;
 
     public Queue<Drink> orderQueue {  get; private set; } //order queue
     public Drink currentOrder;
@@ -91,5 +100,10 @@ public class OrderManager : MonoBehaviour
 
             currentOrder = orderQueue.Dequeue().GetComponent<Drink>();
         }
+        
+        // Set UI (It's bad but it works)
+        tapiocaImage.GetComponent<SpriteRenderer>().sprite = tapiocaSprites[(int)currentOrder.tapiocaType - 1];
+        cupSizeImage.GetComponent<SpriteRenderer>().sprite = cupSprites[(int)currentOrder.cupSize - 1];
+        milkImage.GetComponent<SpriteRenderer>().sprite = milkSprites[(int)currentOrder.milkType - 1];
     }
 }
