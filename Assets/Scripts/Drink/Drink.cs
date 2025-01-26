@@ -15,6 +15,7 @@ public class Drink : MonoBehaviour
     //Drink checks - we need this to judge score
     bool correctTapioca = false;
     bool correctCupSize = false;
+    bool isThereACup = false;
     bool correctMilkType = false;
     float milkQuantityPercentage;
     private float timeScore = 1000; //order time taken to calcualte score
@@ -44,11 +45,18 @@ public class Drink : MonoBehaviour
     /// Functions that check the drink correctness - - - - - - - - - - - - - - -
     public void CheckCupSize(CUP_SIZE cupSizeInput)
     {
+        isThereACup = true;
         correctCupSize = cupSizeInput == cupSize;
     }
 
     public void CheckTapiocaType(TAPIOCA_TYPE tapiocaTypeInput)
     {
+        //confirm there is atleast a cup
+        if(!isThereACup)
+        {
+            return;
+        }
+
         correctTapioca = tapiocaTypeInput == tapiocaType;
     }
 

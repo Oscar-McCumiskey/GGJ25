@@ -7,7 +7,6 @@ public class DeathBox : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
         // Destroy this tapioca
         if (other.gameObject.CompareTag("Tapioca"))
         {
