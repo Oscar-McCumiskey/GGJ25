@@ -50,7 +50,7 @@ public class Drink : MonoBehaviour
         isThereACup = true;
         correctCupSize = cupSizeInput == cupSize;
 
-        if (correctCupSize)
+        if (cupSizeInput != CUP_SIZE.NONE)
         {
             if(cupSizeInput == CUP_SIZE.SMALL)
             {

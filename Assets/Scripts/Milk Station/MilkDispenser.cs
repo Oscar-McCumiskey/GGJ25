@@ -13,7 +13,16 @@ public class MilkDispenser : MonoBehaviour
     [SerializeField] private float milkSpeed;
     [SerializeField] private ButtonHeld buttonScript;
     private bool milkPouring = false;
-    private bool resetOnce = false;
+    public bool hitBottom = false;
+
+    [SerializeField] private Sprite mangoMilk;
+    [SerializeField] private Sprite strawberryMilk;
+    [SerializeField] private Sprite chcocolateMilk;
+    [SerializeField] private Sprite MatchMilk;
+    [SerializeField] private Sprite mangoMilkStream;
+    [SerializeField] private Sprite strawberryMilkStream;
+    [SerializeField] private Sprite chcocolateMilkStream;
+    [SerializeField] private Sprite MatchMilkStream;
 
     float maxFillTime = 0;
     float currentFillTime = 0;
@@ -36,32 +45,36 @@ public class MilkDispenser : MonoBehaviour
         maxFillTime = 3f;
         overFillTime = 6f;
         currentFillTime = 0;
-
-        Debug.Log("SPAWN POS: " + milkSpawnLocation.transform.position);
     }
 
     private void Update()
     {
         if(buttonScript.isButtonDown)
         {
-            //update fill amount with time 
-            currentFillTime += Time.deltaTime;
-
             //Dispenses milk
             Dispense();
 
             //check overfilled
             if(currentFillTime >= overFillTime)
             {
-                //do something  
-                resetOnce = true;
                 Debug.Log("TOO FILLED");
             } 
+
         }
         else
         {
-            Debug.Log("reseting milk");
+            hitBottom = false;
             ResetMilk();
+        }
+
+        if (hitBottom)
+        {
+            //update fill amount with time 
+            currentFillTime += Time.deltaTime;
+
+            Debug.Log("HIT BOTTOM");
+            GameManager.Instance.currentCup.transform.GetChild(0).gameObject.SetActive(true);
+            GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<Milk>().IncreaseMilk();
         }
     }
 
@@ -99,14 +112,13 @@ public class MilkDispenser : MonoBehaviour
         }
 
         //reset 
+        hitBottom = true;
         milkPouring = false;
-        resetOnce = true;
         yield return null;
     }
 
     private void ResetMilk()
     {
         milk.transform.position = milkSpawnLocation.transform.position;
-        Debug.Log("CURRENT MILK POS: " + milk.transform.position + ", ORIGINAL POS " + milkSpawnLocation.transform.position);
     }
 }
