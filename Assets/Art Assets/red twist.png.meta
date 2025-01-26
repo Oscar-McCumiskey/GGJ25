@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a58c589f90aff7e4181c743aec26de97
+guid: dda67536d1474ae4e95a0a8e9b369e8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3616512531535755360
-    second: bell_0
+      213: 5905284996485916780
+    second: red twist_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bell_0
+      name: red twist_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 220
+        x: 658
+        y: 675
+        width: 182
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 068ffef7cfe603230800000000000000
-      internalID: 3616512531535755360
+      spriteID: c68acf0ba69c3f150800000000000000
+      internalID: 5905284996485916780
       vertices: []
       indices: 
       edges: []
@@ -123,15 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 614743689e3ca904aaf4cb0a99673f39
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      bell_0: 3616512531535755360
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

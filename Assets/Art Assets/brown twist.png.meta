@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ab6a446cb42f0784997262eeb7d12e72
+guid: 0a4b675648a89dd429f0d305a9f2ed13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7616711931009335995
-    second: boba machine_0
+      213: 576271978021366494
+    second: brown twist_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boba machine_0
+      name: brown twist_0
       rect:
         serializedVersion: 2
-        x: 521
-        y: 563
-        width: 878
-        height: 517
+        x: 1082
+        y: 674
+        width: 182
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb28a4c652ff3b960800000000000000
-      internalID: 7616711931009335995
+      spriteID: edaa9ff8f445ff700800000000000000
+      internalID: 576271978021366494
       vertices: []
       indices: 
       edges: []
