@@ -13,7 +13,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField] private Transform currentDrinkParent;
 
     public Queue<Drink> orderQueue {  get; private set; } //order queue
-    Drink currentOrder;
+    public Drink currentOrder;
 
     private void Awake()
     {

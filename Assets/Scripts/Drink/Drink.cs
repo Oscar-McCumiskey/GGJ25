@@ -30,14 +30,30 @@ public class Drink : MonoBehaviour
     {
         //cup size
         int valueCount = System.Enum.GetValues(typeof(CUP_SIZE)).Length;
-        cupSize = (CUP_SIZE)Random.Range(0, valueCount);
+        cupSize = (CUP_SIZE)Random.Range(1, valueCount);
 
         //tapioca type
         valueCount = System.Enum.GetValues(typeof(TAPIOCA_TYPE)).Length;
-        tapiocaType = (TAPIOCA_TYPE)Random.Range(0, valueCount);
+        tapiocaType = (TAPIOCA_TYPE)Random.Range(1, valueCount);
 
         //milk type
         valueCount = System.Enum.GetValues(typeof(MILK_TYPE)).Length;
-        milkType = (MILK_TYPE)Random.Range(0, valueCount);
+        milkType = (MILK_TYPE)Random.Range(1, valueCount);
+    }
+
+    /// Functions that check the drink correctness - - - - - - - - - - - - - - -
+    public void CheckCupSize(CUP_SIZE cupSizeInput)
+    {
+        correctCupSize = cupSizeInput == cupSize;
+    }
+
+    public void CheckTapiocaType(TAPIOCA_TYPE tapiocaTypeInput)
+    {
+        correctTapioca = tapiocaTypeInput == tapiocaType;
+    }
+
+    public void CheckMilkType(MILK_TYPE milkTypeInput)
+    {
+        correctMilkType = milkTypeInput == milkType;
     }
 }

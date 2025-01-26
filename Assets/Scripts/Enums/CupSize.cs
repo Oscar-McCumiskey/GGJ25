@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum CUP_SIZE
 {
-    SMALL, MEDIUM, LARGE, NONE
+    NONE, SMALL, MEDIUM, LARGE
 }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class ChangeCupSize : MonoBehaviour
 {
@@ -15,8 +14,6 @@ public class ChangeCupSize : MonoBehaviour
     private void Start()
     {
         //initial cup size (medium)
-        //mediumCup.SetActive(true);
-        
         smallCup.SetActive(false);
         mediumCup.SetActive(false);
         largeCup.SetActive(false);
@@ -35,6 +32,8 @@ public class ChangeCupSize : MonoBehaviour
         largeCup.SetActive(false);
 
         StartCoroutine(MoveCupTowardsEndPosition());
+
+        OrderManager.Instance.currentOrder.CheckCupSize(CUP_SIZE.SMALL);
     }
 
     public void MediumCup()
@@ -48,6 +47,8 @@ public class ChangeCupSize : MonoBehaviour
         largeCup.SetActive(false);
 
         StartCoroutine(MoveCupTowardsEndPosition());
+
+        OrderManager.Instance.currentOrder.CheckCupSize(CUP_SIZE.MEDIUM);
     }
 
     public void LargeCup()
@@ -60,6 +61,8 @@ public class ChangeCupSize : MonoBehaviour
         mediumCup.SetActive(false);
 
         StartCoroutine(MoveCupTowardsEndPosition());
+
+        OrderManager.Instance.currentOrder.CheckCupSize(CUP_SIZE.LARGE);
     }
 
     IEnumerator MoveCupTowardsEndPosition()
