@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GreenMilk 1_0: -815510375906158792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

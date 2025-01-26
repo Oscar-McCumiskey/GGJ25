@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 37bb727619cdded43ab54f1ea74a1905
+guid: fdab584656e1bc74799a4b72d4e6d85a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1592684291911520096
-    second: BrownMilk_0
+      213: -3451699440861859892
+    second: MainMenu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BrownMilk_0
+      name: MainMenu_0
       rect:
         serializedVersion: 2
-        x: 838
-        y: 56
-        width: 98
-        height: 945
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06f0bb2dce95a1610800000000000000
-      internalID: 1592684291911520096
+      spriteID: ccfa30c75a91910d0800000000000000
+      internalID: -3451699440861859892
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BrownMilk_0: 1592684291911520096
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

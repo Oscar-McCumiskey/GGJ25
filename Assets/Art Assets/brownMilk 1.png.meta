@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      brownMilk 1_0: -7044339365554598671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
