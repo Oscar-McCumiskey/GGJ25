@@ -15,12 +15,13 @@ public class Drink : MonoBehaviour
     //to find cup ref
 
     //Drink checks - we need this to judge score
-    bool correctTapioca = false;
-    bool correctCupSize = false;
-    bool isThereACup = false;
-    bool correctMilkType = false;
-    float milkQuantityPercentage;
+    public bool correctTapioca = false;
+    public bool correctCupSize = false;
+    public bool isThereACup = false;
+    public bool correctMilkType = false;
+    public float milkQuantityPercentage;
     private float timeScore = 1000; //order time taken to calcualte score
+    public MILK_TYPE selectedMilkType = MILK_TYPE.NONE;
 
     public void Reset()
     {
@@ -64,9 +65,7 @@ public class Drink : MonoBehaviour
             {
                 GameManager.Instance.currentCup = GameManager.Instance.largeCup;
             }
-
         }
-
     }
 
     public void CheckTapiocaType(TAPIOCA_TYPE tapiocaTypeInput)

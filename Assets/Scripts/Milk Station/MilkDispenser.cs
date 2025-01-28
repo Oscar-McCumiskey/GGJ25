@@ -139,30 +139,53 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetStrawberryMilk()
     {
-        
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        {
+            return;
+        }
+
         if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = strawberryMilk;
+        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.STAWBERRY;
     }
 
     public void SetMangoMilk()
     {
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        {
+            return;
+        }
+
         if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = mangoMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = mangoMilk;
+        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.MANGO;
     }
 
     public void SetMatchaMilk()
     {
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        {
+            return;
+        }
+
         if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = matchaMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = matchaMilk;
+        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.MATCHA;
     }
 
     public void SetChocolateMilk()
     {
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        {
+            return;
+        }
+
         if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = chocolateMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = chocolateMilk;
+        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.CHOCOLATE;
     }
 }
