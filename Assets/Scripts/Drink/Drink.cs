@@ -81,8 +81,8 @@ public class Drink : MonoBehaviour
         correctTapioca = tapiocaTypeInput == tapiocaType;
     }
 
-    public void CheckMilkType(MILK_TYPE milkTypeInput)
+    public void CheckMilkType()
     {
-        correctMilkType = milkTypeInput == milkType;
+        correctMilkType = selectedMilkType == milkType;
     }
 }

@@ -77,9 +77,9 @@ public class OrderManager : MonoBehaviour
     /// </summary>
     public void CompleteOrder()
     {
-        if(orderQueue.Count == 0) //session finished
+        if (orderQueue.Count == 0) //session finished
         {
-            ScoreManager.Instance.ReturnScore();
+            Debug.Log(ScoreManager.Instance.ReturnScore());
         }
         else //next drink
         {
@@ -88,6 +88,8 @@ public class OrderManager : MonoBehaviour
             {
                 //remove current drink visualisation
                 Destroy(currentDrinkParent.GetChild(0).gameObject);
+
+                Debug.Log("DRINK SCORE: " + ScoreManager.Instance.AddScore());
             }
 
             //Move GO from queue to current
@@ -97,8 +99,18 @@ public class OrderManager : MonoBehaviour
             }
 
             currentOrder = orderQueue.Dequeue().GetComponent<Drink>();
+
+            ////RESET
+            if(GameManager.Instance.currentCup != null)
+            {
+                TapiocaDispenser.Instance.ResetTapioca();
+                GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<Milk>().ResetMilk();
+                GameManager.Instance.currentCup.transform.eulerAngles = new Vector3(0,0,0);
+                GameManager.Instance.currentCup.transform.gameObject.SetActive(false);
+                GameManager.Instance.Reset();
+            }
         }
-        
+
         // Set UI (It's bad but it works)
         tapiocaImage.GetComponent<SpriteRenderer>().sprite = tapiocaSprites[(int)currentOrder.tapiocaType - 1];
         cupSizeImage.GetComponent<SpriteRenderer>().sprite = cupSprites[(int)currentOrder.cupSize - 1];

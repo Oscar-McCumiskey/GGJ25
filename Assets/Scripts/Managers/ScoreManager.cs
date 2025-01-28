@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
 
     private float score;
+    private float totalScore;
 
     private float passingRate = 1;
 
@@ -31,6 +33,7 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = "0";
         score = 0;
+        totalScore = 0;
     }
 
     public void AddScore(float value)
@@ -45,6 +48,43 @@ public class ScoreManager : MonoBehaviour
 
     public float ReturnScore()
     {
-        return score;
+        return (totalScore / 3000) * 100;
+    }
+
+    public float AddScore()
+    {
+        score = 0;
+        var drink = OrderManager.Instance.currentOrder;
+
+        //SCORE MATHS
+        if (drink.correctCupSize && drink.isThereACup)
+        {
+            score += 100;
+        }
+        else
+        {
+            Debug.Log("NO CUP OR WRONG CUP SIZE");
+        }
+
+        if (drink.correctTapioca)
+        {
+            score += 100;
+        }
+        else
+        {
+            Debug.Log("WRONG TAPIOCA");
+        }
+
+        if (drink.correctMilkType)
+        {
+            score += 100;
+        }
+        else
+        {
+            Debug.Log("WRONG MILK OR NO MILK");
+        }
+
+        totalScore += (score / 300);
+        return (score / 300);
     }
 }

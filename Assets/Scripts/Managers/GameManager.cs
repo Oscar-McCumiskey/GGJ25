@@ -57,4 +57,9 @@ public class GameManager : MonoBehaviour
         }
         currentStation--;
     }
+
+    public void Reset()
+    {
+        currentCup = null;
+    }
 }

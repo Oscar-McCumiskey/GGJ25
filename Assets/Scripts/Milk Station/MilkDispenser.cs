@@ -156,7 +156,8 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetStrawberryMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
+        Drink drink = OrderManager.Instance.currentOrder;
+        if (drink.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -165,11 +166,13 @@ public class MilkDispenser : MonoBehaviour
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = strawberryMilk;
         OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.STRAWBERRY;
+        OrderManager.Instance.currentOrder.CheckMilkType();
     }
 
     public void SetMangoMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
+        Drink drink = OrderManager.Instance.currentOrder;
+        if (drink.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -178,11 +181,14 @@ public class MilkDispenser : MonoBehaviour
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = mangoMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = mangoMilk;
         OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.MANGO;
+        OrderManager.Instance.currentOrder.CheckMilkType();
     }
 
     public void SetMatchaMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
+        Drink drink = OrderManager.Instance.currentOrder;
+
+        if (drink.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -191,11 +197,14 @@ public class MilkDispenser : MonoBehaviour
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = matchaMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = matchaMilk;
         OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.MATCHA;
+        OrderManager.Instance.currentOrder.CheckMilkType();
     }
 
     public void SetChocolateMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
+        Drink drink = OrderManager.Instance.currentOrder;
+
+        if (drink.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -204,5 +213,6 @@ public class MilkDispenser : MonoBehaviour
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = chocolateMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = chocolateMilk;
         OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.CHOCOLATE;
+        OrderManager.Instance.currentOrder.CheckMilkType();
     }
 }

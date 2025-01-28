@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Milk : MonoBehaviour
 {
+    [SerializeField] private Transform spawnPosition;
     public Transform milkEndPoint;
     private float milkSpeed = 100;
     private bool milkTriggered = false;
@@ -33,5 +34,10 @@ public class Milk : MonoBehaviour
         //reset 
         milkTriggered = false;
         yield return null;
+    }
+
+    public void ResetMilk()
+    {
+        transform.position = spawnPosition.position;
     }
 }
