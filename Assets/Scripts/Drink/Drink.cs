@@ -21,13 +21,15 @@ public class Drink : MonoBehaviour
     public bool correctMilkType = false;
     public float milkQuantityPercentage;
     private float timeScore = 1000; //order time taken to calcualte score
-    public MILK_TYPE selectedMilkType = MILK_TYPE.NONE;
+    public MILK_TYPE selectedMilkType = MILK_TYPE.NONE; //milk currently in cup
 
     public void Reset()
     {
         cupSize = CUP_SIZE.NONE;
         tapiocaType = TAPIOCA_TYPE.NONE;
         milkType = MILK_TYPE.NONE;
+
+        selectedMilkType = MILK_TYPE.NONE;
     }
 
     public void RandomizeDrink()

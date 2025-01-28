@@ -82,7 +82,7 @@ public class MilkDispenser : MonoBehaviour
             holding = false;
         }
 
-        if (holding)
+        if (holding && OrderManager.Instance.currentOrder.isThereACup)
         {
             //Dispenses milk
             Dispense();
@@ -156,7 +156,7 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetStrawberryMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -169,7 +169,7 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetMangoMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -182,7 +182,7 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetMatchaMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }
@@ -195,7 +195,7 @@ public class MilkDispenser : MonoBehaviour
 
     public void SetChocolateMilk()
     {
-        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE)
+        if (OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.NONE || !OrderManager.Instance.currentOrder.isThereACup)
         {
             return;
         }

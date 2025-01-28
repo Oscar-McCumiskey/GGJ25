@@ -13,14 +13,14 @@ public class ChangeCupSize : MonoBehaviour
     private Transform currentCup = null;
     private void Start()
     {
-        //initial cup size (medium)
-        smallCup.SetActive(false);
-        mediumCup.SetActive(false);
-        largeCup.SetActive(false);
-        
         smallCup.transform.position = cupSpawnPoint.transform.position;
         mediumCup.transform.position = cupSpawnPoint.transform.position;
         largeCup.transform.position = cupSpawnPoint.transform.position;
+
+        ////initial cup size (medium)
+        //smallCup.SetActive(false);
+        //mediumCup.SetActive(false);
+        //largeCup.SetActive(false);
     }
     public void SmallCup()
     {
@@ -66,7 +66,10 @@ public class ChangeCupSize : MonoBehaviour
 
     IEnumerator MoveCupTowardsEndPosition()
     {
-        while(currentCup.position.x < cupEndPoint.position.x)
+        // Wait for one frame to ensure the cup is properly reset
+        yield return new WaitForSeconds(1f);
+
+        while (currentCup.position.x < cupEndPoint.position.x)
         {
             currentCup.position = Vector3.MoveTowards(currentCup.position, cupEndPoint.position, 600f * Time.deltaTime);
 
