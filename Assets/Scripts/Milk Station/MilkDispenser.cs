@@ -59,6 +59,23 @@ public class MilkDispenser : MonoBehaviour
         if(mangoButtonScript.isButtonDown || matchaButtonScript.isButtonDown || strawberryButtonScript.isButtonDown || chocolateButtonScript.isButtonDown)
         {
             holding = true;
+
+            if (mangoButtonScript.isButtonDown && OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.MANGO)
+            {
+                holding = false;
+            }
+            if (matchaButtonScript.isButtonDown && OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.MATCHA)
+            {
+                holding = false;
+            }
+            if (strawberryButtonScript.isButtonDown && OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.STRAWBERRY)
+            {
+                holding = false;
+            }
+            if (chocolateButtonScript.isButtonDown && OrderManager.Instance.currentOrder.selectedMilkType != MILK_TYPE.CHOCOLATE)
+            {
+                holding = false;
+            }
         }
         else
         {
@@ -147,7 +164,7 @@ public class MilkDispenser : MonoBehaviour
         if (currentFillTime >= overFillTime) return;
         milkStreamGO.GetComponent<SpriteRenderer>().sprite = strawberryMilkStream;
         GameManager.Instance.currentCup.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = strawberryMilk;
-        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.STAWBERRY;
+        OrderManager.Instance.currentOrder.selectedMilkType = MILK_TYPE.STRAWBERRY;
     }
 
     public void SetMangoMilk()

@@ -5,7 +5,7 @@ using UnityEngine;
 public enum MILK_TYPE
 {
     NONE,
-    STAWBERRY,
+    STRAWBERRY,
     CHOCOLATE,
     MANGO,
     MATCHA
