@@ -130,11 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd656b7a5508d544bfb1d11acb2dceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &157257560 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5357501757543120673, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
-  m_PrefabInstance: {fileID: 1947634494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &162586822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,41 +272,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 9043575456428741433, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
   m_PrefabInstance: {fileID: 1947634494}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &516412265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 516412266}
-  m_Layer: 5
-  m_Name: Tapioca Parent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &516412266
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516412265}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 157257560}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000023437547, y: -292.75}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &601072051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1864,7 @@ PrefabInstance:
     - target: {fileID: 196398805826274961, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
       propertyPath: tapiocaParent
       value: 
-      objectReference: {fileID: 516412266}
+      objectReference: {fileID: 0}
     - target: {fileID: 1078608890270457547, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2019,10 +1979,7 @@ PrefabInstance:
       objectReference: {fileID: 1161187644}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5357501757543120673, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 516412266}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 220748b2e0b20d340bc4fba24f2e7ee7, type: 3}
 --- !u!1 &1955838627
