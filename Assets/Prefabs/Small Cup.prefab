@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98fd1f4d0509d94993f3402a3d1522b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 0}
   milkEndPoint: {fileID: 213924625293299323}
 --- !u!1 &7505619947567578599
 GameObject:
@@ -368,8 +369,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.2573129, y: 2.4362662}
-  - {x: 1.1127933, y: 2.4362662}
+  - {x: -1.2573129, y: 2.0364704}
+  - {x: -1.1438197, y: 2.5266962}
+  - {x: 1.0074633, y: 2.5266957}
+  - {x: 1.1175541, y: 2.1126223}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -461,8 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupSlot: {fileID: 0}
   cupTopCollider: {fileID: 5157427715618740370}
-  cupDragForce: 1000
-  resetSpeed: 1000
 --- !u!331 &3815584125984380834
 SpriteMask:
   m_ObjectHideFlags: 0

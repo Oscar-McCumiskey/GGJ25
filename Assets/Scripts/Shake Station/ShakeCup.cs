@@ -11,13 +11,14 @@ public class ShakeCup : MonoBehaviour
 {
     [SerializeField] private Transform cupSlot;
     [SerializeField] private EdgeCollider2D cupTopCollider;
-    [SerializeField] private float cupDragForce = 100;
     
     private Camera cam;
     private Rigidbody2D rb;
     
     private bool dragging;
-    [SerializeField] private float resetSpeed = 10;
+    private float releaseTimer;
+
+    private Vector2 prevPos;
     
     // Start is called before the first frame update
     void Start()
@@ -34,81 +35,49 @@ public class ShakeCup : MonoBehaviour
         // shake logic
         if (dragging && cam)
         {
-            Vector3 newPos = cam.ScreenToWorldPoint(Input.mousePosition);
-            newPos.z = 0;
-            
-            // set direction
-            Vector2 direction = (newPos - transform.position).normalized;
-            
-            // check if too close to last position
-            if ((newPos - transform.position).magnitude > 0.5f)
-            {
-                // apply force
-                rb.velocity = Vector2.zero;
-                rb.AddForceAtPosition(direction * (cupDragForce * 5), newPos, ForceMode2D.Impulse);
-            }
-            else if ((newPos - transform.position).magnitude > 0.05f)
-            {
-                // apply littler force for smoothing
-                rb.velocity = Vector2.zero;
-                rb.AddForceAtPosition(direction * cupDragForce, newPos, ForceMode2D.Impulse);
-            }
-            else
-            {
-                // force dead zone
-                rb.velocity = Vector2.zero;
-            }
-            
-            // reset cursor to center of cup (trust me it somehow makes it feel better)
-            Mouse.current.WarpCursorPosition(cam.WorldToScreenPoint(transform.position));
+            Vector2 targetPos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+            rb.MovePosition(targetPos);
         }
         
-        // reset cup position
+        // reset cup
         if (!dragging)
         {
-            // reset position back to cup slot
-            rb.velocity = Vector2.zero;
-            Vector2 resetDirection = cupSlot.position - transform.position;
-
-            if (resetDirection.magnitude < 0.01)
+            // fling cup
+            if (releaseTimer > 1)
             {
-                // lock position
-                transform.position = cupSlot.position;
+                Vector2 releaseVelocity = ((Vector2)transform.position - prevPos) * 50;
+                rb.velocity = Vector2.Lerp(Vector2.zero, releaseVelocity, (releaseTimer - 1) / 0.2f);
                 
-                // unlock cup top
-                cupTopCollider.enabled = false;
+                releaseTimer -= Time.fixedDeltaTime;
             }
             else
             {
-                // move to cup slot
-                rb.AddForce(resetDirection.normalized * (resetDirection.magnitude * resetSpeed), ForceMode2D.Impulse);
+                rb.MovePosition(cupSlot.position);
             }
             
-            // reset rotation back to cup slot
-            if (Mathf.Abs(transform.rotation.eulerAngles.z) < 1)
+            // take off lid
+            if (releaseTimer <= 0)
             {
-                // lock rotation
-                rb.angularVelocity = 0;
-                rb.totalTorque = 0;
-                transform.rotation = quaternion.identity;
+                cupTopCollider.enabled = false;
             }
-            
         }
+        
+        prevPos = transform.position;
     }
     
     private void OnMouseDown()
     {
         if (GameManager.Instance.currentStation == STATION_TYPE.SHAKE)
         {
-
             dragging = true;
 
             // hide cursor
             Cursor.visible = false;
-
-            // temp
+            
             cupTopCollider.enabled = true;
 
+            releaseTimer = 1.2f;
         }
     }
 
@@ -117,8 +86,6 @@ public class ShakeCup : MonoBehaviour
         if (GameManager.Instance.currentStation == STATION_TYPE.SHAKE)
         {
             dragging = false;
-            rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0;
 
             // show cursor
             Cursor.visible = true;
