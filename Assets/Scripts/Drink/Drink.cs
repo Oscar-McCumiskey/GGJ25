@@ -17,6 +17,7 @@ public class Drink : MonoBehaviour
     //Drink checks - we need this to judge score
     public bool correctTapioca = false;
     public bool correctCupSize = false;
+    public bool isCupShaken = false;
     public bool isThereACup = false;
     public bool correctMilkType = false;
     public float milkQuantityPercentage;

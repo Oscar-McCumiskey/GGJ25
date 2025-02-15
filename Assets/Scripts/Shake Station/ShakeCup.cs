@@ -26,8 +26,6 @@ public class ShakeCup : MonoBehaviour
         cupTopCollider.enabled = false;
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        
-        transform.position = cupSlot.position;
     }
 
     private void FixedUpdate()
@@ -48,8 +46,6 @@ public class ShakeCup : MonoBehaviour
             {
                 Vector2 releaseVelocity = ((Vector2)transform.position - prevPos) * 50;
                 rb.velocity = Vector2.Lerp(Vector2.zero, releaseVelocity, (releaseTimer - 1) / 0.2f);
-                
-                releaseTimer -= Time.fixedDeltaTime;
             }
             else
             {
@@ -61,6 +57,8 @@ public class ShakeCup : MonoBehaviour
             {
                 cupTopCollider.enabled = false;
             }
+            
+            releaseTimer -= Time.fixedDeltaTime;
         }
         
         prevPos = transform.position;
@@ -78,6 +76,8 @@ public class ShakeCup : MonoBehaviour
             cupTopCollider.enabled = true;
 
             releaseTimer = 1.2f;
+            
+            OrderManager.Instance.currentOrder.isCupShaken = true;
         }
     }
 

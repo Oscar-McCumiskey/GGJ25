@@ -154,6 +154,11 @@ public class MilkDispenser : MonoBehaviour
         milkStream.transform.position = milkSpawnLocation.transform.position;
     }
 
+    public void ResetFillTimer()
+    {
+        currentFillTime = 0;
+    }
+
     public void SetStrawberryMilk()
     {
         Drink drink = OrderManager.Instance.currentOrder;

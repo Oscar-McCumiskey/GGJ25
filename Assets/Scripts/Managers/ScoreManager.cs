@@ -43,7 +43,7 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = totalScore.ToString();
     }
 
     public float ReturnScore()
@@ -75,6 +75,11 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("WRONG TAPIOCA");
         }
 
+        if (drink.isCupShaken)
+        {
+            score += 100;
+        }
+
         if (drink.correctMilkType)
         {
             score += 100;
@@ -84,7 +89,7 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("WRONG MILK OR NO MILK");
         }
 
-        totalScore += (score / 300);
-        return (score / 300);
+        totalScore += score;
+        return score;
     }
 }

@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject largeCup;
     public GameObject mediumCup;
     public GameObject smallCup;
+
+    private List<Vector3> newCanvasPosition = new();
+    private List<Vector3> prevCanvasPosition = new();
+    private bool isMoving = false;
+    private float moveTimer = 0;
+    private float moveTime = 0.5f;
 
     private void Awake()
     {
@@ -30,6 +39,28 @@ public class GameManager : MonoBehaviour
     {
         currentCup = null;
         StartGame();
+        
+        moveTimer = moveTime;
+    }
+
+    private void Update()
+    {
+        if (isMoving)
+        {
+            for (int i = 0; i < stationList.Length; i++)
+            {
+                stationList[i].GetComponent<RectTransform>().position = Vector3.Lerp(newCanvasPosition[i], prevCanvasPosition[i], moveTimer / moveTime);
+            }
+
+            // stop moving
+            if (moveTimer <= 0)
+            {
+                moveTimer = moveTime;
+                isMoving = false;
+            }
+            
+            moveTimer -= Time.deltaTime;
+        }
     }
 
     public void StartGame()
@@ -40,22 +71,44 @@ public class GameManager : MonoBehaviour
 
     public void NextStation()
     {
-        if ((int)currentStation == stationList.Length - 1) return;
-        foreach (Canvas canvas in stationList)
+        if (!isMoving)
         {
-            canvas.GetComponent<RectTransform>().position += new Vector3(-1920f, 0f, 0f);
+            if ((int)currentStation == stationList.Length - 1) return;
+            
+            prevCanvasPosition.Clear();
+            newCanvasPosition.Clear();
+            
+            for (int i = 0; i < stationList.Length; i++)
+            {
+                //canvas.GetComponent<RectTransform>().position += new Vector3(-1920f, 0f, 0f);
+                prevCanvasPosition.Add(stationList[i].transform.position);
+                newCanvasPosition.Add(stationList[i].transform.position + new Vector3(-1920f, 0f, 0f));
+            }
+
+            currentStation++;
+            isMoving = true;
         }
-        currentStation++;
     }
 
     public void PrevStation()
     {
-        if ((int)currentStation - 1 == -1) return;
-        foreach (Canvas canvas in stationList)
+        if (!isMoving)
         {
-            canvas.GetComponent<RectTransform>().position += new Vector3(1920f, 0f, 0f);
+            if ((int)currentStation - 1 == -1) return;
+            
+            prevCanvasPosition.Clear();
+            newCanvasPosition.Clear();
+            
+            for (int i = 0; i < stationList.Length; i++)
+            {
+                //canvas.GetComponent<RectTransform>().position += new Vector3(1920f, 0f, 0f);
+                prevCanvasPosition.Add(stationList[i].transform.position);
+                newCanvasPosition.Add(stationList[i].transform.position + new Vector3(1920f, 0f, 0f));
+            }
+
+            currentStation--;
+            isMoving = true;
         }
-        currentStation--;
     }
 
     public void Reset()

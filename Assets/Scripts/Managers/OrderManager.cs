@@ -42,7 +42,7 @@ public class OrderManager : MonoBehaviour
     public void Init()
     {
         //Add a number of drinks
-        AddNewRandomDrinkToQueue(10);
+        AddNewRandomDrinkToQueue(100);
 
         //set first order (not techniqually completing the order, but setting the next drink in queue to current drink
         CompleteOrder();
